@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import { StoreCard } from "@/features/admin/home/components/store-card";
 import { StatsOverview } from "@/features/admin/home/components/stats-overview";
+import { PageHeader } from "@/components/shared/page-header";
 import { Button } from "@/components/ui/button";
-import { Plus, RefreshCw } from "lucide-react";
+import { Plus } from "lucide-react";
 import { pageMainContainer } from "@/core/styles/page-containers.style";
 import { cn } from "@/lib/utils";
 
@@ -54,23 +55,14 @@ const mockStores = [
 export default function AdminHome() {
   return (
     <div className={cn(pageMainContainer)}>
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Overview</h1>
-          <p className="text-muted-foreground">
-            Manage and monitor your stores performance
-          </p>
-        </div>
-        <div className="flex items-center gap-4">
-          <Button variant="outline" size="icon">
-            <RefreshCw className="h-4 w-4" />
-          </Button>
-          <Button>
-            <Plus className="h-4 w-4 mr-2" />
-            New Store
-          </Button>
-        </div>
-      </div>
+      <PageHeader
+        title="Overview"
+        description="Manage and monitor your stores performance"
+        action={{
+          icon: <Plus className="h-4 w-4 mr-2" />,
+          label: "New Store",
+        }}
+      />
 
       <Suspense fallback={<div>Loading stats...</div>}>
         <StatsOverview stats={mockStats} />
