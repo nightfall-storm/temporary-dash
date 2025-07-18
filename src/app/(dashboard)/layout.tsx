@@ -35,9 +35,7 @@ export default async function DashboardLayout({
                 {/* <DashboardBreadcrumb /> */}
               </div>
             </header>
-            <main
-              className={cn("flex-1 overflow-y-auto p-6 container mx-auto")}
-            >
+            <main className={cn("flex-1 overflow-y-auto p-6 container")}>
               {children}
             </main>
           </div>
