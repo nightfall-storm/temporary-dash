@@ -21,7 +21,7 @@ export function EmptyView({
   if (centered) {
     return (
       <div className="min-h-[calc(100vh-16rem)] flex items-center">
-        <Card className={cn("relative w-full", className)}>
+        <Card className={cn("relative w-full rounded-md", className)}>
           <div className="flex flex-col items-center justify-center p-8 text-center">
             <div className="flex flex-col items-center gap-4">
               <div className={iconContainerStyle}>

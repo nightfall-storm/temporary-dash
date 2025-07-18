@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Sans } from "next/font/google";
 import "./globals.css";
-
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 export const firaSans = Fira_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${firaSans.variable} ${firaSans.className} antialiased`}
       >
-        {children}
+        <NuqsAdapter>{children}</NuqsAdapter>
       </body>
     </html>
   );
