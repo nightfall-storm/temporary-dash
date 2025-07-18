@@ -44,17 +44,18 @@
 }
 
 @theme {
-  --color-primaryColor-50: #f3f2ff;
-  --color-primaryColor-100: #e9e8ff;
-  --color-primaryColor-200: #d5d4ff;
-  --color-primaryColor-300: #b7b1ff;
-  --color-primaryColor-400: #9385ff;
-  --color-primaryColor-500: #7459ff;
-  --color-primaryColor-600: #5d30f7;
-  --color-primaryColor-700: #4f1ee3;
-  --color-primaryColor-800: #4118bf;
-  --color-primaryColor-900: #37169c;
-  --color-primaryColor-950: #1f0b6a;
+  --color-primaryColor: oklch(55.59% 0.265 298.76);
+  --color-primaryColor-50: oklch(96.81% 0.014 288.34);
+  --color-primaryColor-100: oklch(94.48% 0.024 288.14);
+  --color-primaryColor-200: oklch(89.88% 0.053 288.29);
+  --color-primaryColor-300: oklch(82.61% 0.099 288.29);
+  --color-primaryColor-400: oklch(72.34% 0.142 288.79);
+  --color-primaryColor-500: oklch(61.41% 0.202 288.99);
+  --color-primaryColor-600: oklch(55.59% 0.265 298.76); /* same as base */
+  --color-primaryColor-700: oklch(49.08% 0.235 296.37);
+  --color-primaryColor-800: oklch(42.77% 0.207 295.91);
+  --color-primaryColor-900: oklch(36.89% 0.179 295.29);
+  --color-primaryColor-950: oklch(24.38% 0.131 294.97);
 }
 
 :root {

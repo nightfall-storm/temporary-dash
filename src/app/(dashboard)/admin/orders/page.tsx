@@ -8,6 +8,7 @@ import { OrderFilters } from "@/features/admin/orders/components/order-filters";
 import { DataTable } from "@/components/shared/data-table";
 import { Order, orderColumns } from "@/components/shared/columns";
 import { SearchInput } from "@/components/shared/search-input";
+import { OrderTabsFilters } from "@/features/admin/orders/components/order-tabs-filters";
 
 const mockOrders: Order[] = [
   {
@@ -53,12 +54,16 @@ export default function AdminOrders() {
         <OrderActions />
       </div>
 
+      {/* Tabs Status */}
       {/* search input */}
       <SearchInput className="w-full max-w-sm" />
 
       <Suspense fallback={<div>Loading...</div>}>
         {mockOrders.length > 0 ? (
-          <DataTable columns={orderColumns} data={mockOrders} />
+          <div>
+            <OrderTabsFilters />
+            <DataTable columns={orderColumns} data={mockOrders} />
+          </div>
         ) : (
           <EmptyView
             title="No orders yet"
