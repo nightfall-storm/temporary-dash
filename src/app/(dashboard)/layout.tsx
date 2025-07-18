@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { DashboardSidebar } from "@/components/shared/DashboardSidebar";
+import { DashboardSidebar } from "@/components/shared/dashboard-sidebar";
 // import { Button } from "@/components/ui/button";
 // import Link from "next/link";
 
@@ -35,9 +35,7 @@ export default async function DashboardLayout({
                 {/* <DashboardBreadcrumb /> */}
               </div>
             </header>
-            <main className={cn("flex-1 overflow-y-auto p-6 container")}>
-              {children}
-            </main>
+            <main className={cn("flex-1 overflow-y-auto p-6")}>{children}</main>
           </div>
         </SidebarProvider>
       </div>

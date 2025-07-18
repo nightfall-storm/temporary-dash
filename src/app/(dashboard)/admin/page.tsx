@@ -3,6 +3,8 @@ import { StoreCard } from "@/features/admin/home/components/store-card";
 import { StatsOverview } from "@/features/admin/home/components/stats-overview";
 import { Button } from "@/components/ui/button";
 import { Plus, RefreshCw } from "lucide-react";
+import { pageMainContainer } from "@/core/styles/page-containers.style";
+import { cn } from "@/lib/utils";
 
 // This would typically come from your API
 const mockStats = {
@@ -51,7 +53,7 @@ const mockStores = [
 
 export default function AdminHome() {
   return (
-    <div className="space-y-8 max-w-[1400px] mx-auto">
+    <div className={cn(pageMainContainer)}>
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Overview</h1>
